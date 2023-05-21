@@ -1,4 +1,6 @@
-name: redstoneutility
-main: org.redcraft.Plugin
-version: 0.0.1
-api-version: 1.15
+name: RedCraftRedstoneUtility
+main: org.redcraft.redcraftredstoneutility.RedCraftRedstoneUtility
+version: 0.0.2
+api-version: 1.17
+author: RedCraft
+authors: [Omeganx]

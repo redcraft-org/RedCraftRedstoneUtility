@@ -1,9 +1,8 @@
-package org.redcraft;
+package org.redcraft.redcraftredstoneutility.listeners;
 
 import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.block.data.type.Slab;
-import org.bukkit.block.data.type.Slab.Type;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -17,14 +16,16 @@ public class SlabPlaceListener implements Listener {
         Player blockPlacer = event.getPlayer();
 
         // Player can cancel the slab shift bottom to top by sneaking.
-        if (blockPlacer.isSneaking())
+        if (blockPlacer.isSneaking()) {
             return;
+        }
 
         Block blockPlaced = event.getBlock();
         BlockData blockPlacedData = blockPlaced.getBlockData();
 
-        if (!(blockPlacedData instanceof Slab))
+        if (!(blockPlacedData instanceof Slab)) {
             return;
+        }
 
         Slab slab = (Slab) blockPlacedData;
 
